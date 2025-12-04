@@ -1,0 +1,68 @@
+
+
+  <tbody>
+  <div class="resume-container">
+    <%  person=PersonalInfo.find(1) 
+        contact=ContactInfo.find(1)
+        @skills=Skill.all
+        @work_experiences = WorkExperience.all
+        @educational_backgrounds = EducationalBackground.all
+    %> 
+      <select>
+        <option> Style 1 </option>
+        <option> Style 2 </option>
+      </select>
+
+      <div> 
+        <p class="fullname"><%= person.first_name =%> 
+        <%= person.middle_name[0]=%> 
+        <%= person.last_name =%>
+        </p>
+      </div>
+
+      <div class="contactinfo">
+        <p><%= contact.email =%></p>
+        <p><%= contact.phone_number =%></p>
+        <p><%= contact.address =%></p>
+      </div>
+
+      <div class="education">
+      <p>Educational Attainment</p>
+      <ul>
+        <% @educational_backgrounds.each do |educational_background| %>
+          <% if educational_background.personal_info_id == 1 %>
+          <li> <%= educational_background.course %> - <%= educational_background.school %> from <%= educational_background.date_attended %> to <%= educational_background.date_graduated %> 
+          </li>
+          <% end %>
+        <% end %>
+      </ul>
+      </div>
+
+      <div class="skills">
+      <p>Skills</p>
+      <ul>
+        <% @skills.each do |skill| %>
+          <% if skill.personal_info_id == 1 %>
+          <li> <%= skill.type_of_skill =%> <%= skill.level_of_proficiency %> 
+          </li>
+          <% end %>
+        <% end %>
+      </ul>
+      </div>
+
+      <div class="work_experience">
+      <p>Work Experiences</p>
+      <ul>
+        <% @work_experiences.each do |work_experience| %>
+          <% if work_experience.personal_info_id == 1 %>
+          <li> <%= work_experience.company_name =%> <%= work_experience.position %> from <%= work_experience.start_date %> to <%= work_experience.end_date %>
+          </li>
+          <% end %>
+        <% end %>
+      </ul>
+      </div>
+      
+
+  </div>
+  </tbody>
+
