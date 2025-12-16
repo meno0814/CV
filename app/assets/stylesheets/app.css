@@ -1,4 +1,4 @@
-/* ======= GLOBAL ======= */
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
@@ -16,7 +16,7 @@ body {
   border-radius: 6px;
 }
 
-/* ======= NAME ======= */
+
 .fullname {
   font-size: 36px;
   font-weight: bold;
@@ -26,14 +26,14 @@ body {
   letter-spacing: 2px;
 }
 
-/* ======= CONTACT INFO ======= */
+
 .contactinfo p {
   margin: 2px 0;
   color: #555;
   font-size: 14px;
 }
 
-/* ======= SECTION HEADINGS ======= */
+
 .education>p,
 .skills>p,
 .work_experience>p {
@@ -47,7 +47,7 @@ body {
   padding-bottom: 5px;
 }
 
-/* ======= LISTS ======= */
+
 ul {
   margin: 0;
   padding-left: 20px;
@@ -59,20 +59,36 @@ li {
   color: #444;
 }
 
-/* ======= SKILLS ======= */
+
 .skills li {
   font-weight: 500;
 }
 
-/* ======= WORK EXPERIENCE ======= */
+
 .work_experience li {
   margin-bottom: 8px;
 }
 
-/* ======= DROPDOWN ======= */
+
 select {
   margin-bottom: 20px;
   padding: 6px 10px;
   font-size: 14px;
   border-radius: 4px;
+}
+
+
+.personal-info {
+  margin-left: 0;
+  margin-right: auto;
+  font-size: .9rem;
+}
+.personal-info input {
+  float: right;
+  margin-left: 10px;
+  
+}
+
+input[type="submit"] {
+  float: left;
 }

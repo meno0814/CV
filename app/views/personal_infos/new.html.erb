@@ -1,0 +1,41 @@
+<%= form_with(model: @personal_info) do |f| %>
+  <div class="personal-info">
+    <p class="Personal">First Name: <%= f.text_field :first_name, placeholder:"Ex: John " %></p>
+    <p class="Personal">Last Name: <%= f.text_field :last_name, placeholder:"Ex: Smith " %></p>
+    <p class="Personal">Middle Name: <%= f.text_field :middle_name, placeholder:"Ex: Brown " %></p>
+    <p class="Personal">Suffix: <%= f.text_field :extension, placeholder:"Ex:Jr " %></p>
+    <p class="Personal">Date of Birth:<%= f.date_field :dob, placeholder:"Ex: 8/1/1995 " %></p>
+    <p class="Personal">Username: <%= f.text_field :username %></p>
+    <p class="Personal">Password: <%= f.password_field :password_digest %></p>
+  
+  <%= f.fields_for :contact_infos do |c| %>
+    <p class="Personal">Email: <%= c.text_field :email, placeholder: "Ex: john@gmail.com" %></p>
+    <p class="Personal">Phone: <%= c.text_field :phone_number, placeholder: "Ex: 09123456789" %></p>
+    <p class="Personal">Address: <%= c.text_field :address, placeholder: "Ex: Manila Ph" %></p>
+    <p class="Personal:">URL: <%= c.text_field :link, placeholder: "Ex: John@linkedin.com1234" %></p>
+  <% end %> 
+  
+  <%= f.fields_for :educational_backgrounds do |e| %>
+    <p>Level: <%= e.text_field :educational_level, placeholder: "Ex: Bachelor" %></p>
+    <p>Course: <%= e.text_field :course, placeholder: "Ex: Information Technology" %></p>
+    <p>School: <%= e.text_field :school, placeholder: "Ex: UP Diliman" %></p>
+    <p>Date Attended: <%= e.date_field :date_attended %></p>
+    <p>Date Graduated: <%= e.date_field :date_graduated %></p>
+  <% end %>
+
+  <%= f.fields_for :skills do |s| %>
+    <p>Type of Skill: <%= s.text_field :type_of_skill, placeholder: "Ex: HTML" %></p>
+    <p>Level of Proficiency: <%= s.text_field :level_of_proficiency, placeholder: "Ex: Basic" %></p>
+  <% end %>
+
+  <%= f.fields_for :work_experiences do |w| %>
+    <p>Company Name: <%= w.text_field :company_name, placeholder: "Ex: Google" %></p>
+    <p>Position: <%= w.text_field :position, placeholder: "Ex: Web developer" %></p>
+    <p>Start date: <%= w.date_field :start_date  %></p>
+    <p>End date: <%= w.date_field :end_date  %></p>
+          
+  <% end %>
+
+  <%= f.submit %>
+  </div>
+<% end %>

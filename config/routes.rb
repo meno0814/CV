@@ -1,14 +1,5 @@
 Rails.application.routes.draw do
-  get "sesssions/new"
-  get "sesssions/create"
-  get "sesssions/destroy"
-  get "contact_infos/index"
-  get "contact_infos/show"
-  get "contact_infos/new"
-  get "contact_infos/create"
-  get "contact_infos/edit"
-  get "contact_infos/update"
-  get "contact_infos/destroy"
+
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
@@ -26,7 +17,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   Rails.application.routes.draw do 
-    resources :personal_infos, only: [:index, :show]
+    resources :personal_infos
   end
 
 end
