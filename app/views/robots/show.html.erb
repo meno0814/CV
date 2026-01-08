@@ -1,0 +1,8 @@
+<%params%>
+
+<p><%=@robot.robot_name %> </p>
+<p><%=@robot.x_coordinate %> </p>
+<p><%=@robot.y_coordinate %> </p>
+<p><%=@robot.direction %> </p>
+<%= button_to "Move Robot", move_robot_path, method: :post %>
+<%= button_to "Rotate Robot", rotate_robot_path, method: :post %>

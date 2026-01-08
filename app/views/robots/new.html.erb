@@ -1,0 +1,10 @@
+<%= form_with model: @robot, url: place_robots_path, method: :post do |f| %>
+  <div>
+    <p>Robot Name: <%= f.text_field :robot_name, placeholder:"" %></p>
+    <p>X: <%= f.text_field :x_coordinate, placeholder:"" %></p>
+    <p>Y: <%= f.text_field :y_coordinate, placeholder:"" %></p>
+    <p>Diection: <%= f.text_field :direction, placeholder:"" %></p>
+
+  <%= f.submit %>
+  </div>
+<% end %>

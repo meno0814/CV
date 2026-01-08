@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_11_13_090853) do
+ActiveRecord::Schema[7.2].define(version: 2026_01_08_193230) do
   create_table "contact_infos", force: :cascade do |t|
     t.string "address"
     t.string "phone_number"
@@ -45,6 +45,15 @@ ActiveRecord::Schema[7.2].define(version: 2025_11_13_090853) do
     t.datetime "updated_at", null: false
     t.string "username"
     t.string "password_digest"
+  end
+
+  create_table "robots", force: :cascade do |t|
+    t.string "robot_name"
+    t.integer "x_coordinate"
+    t.integer "y_coordinate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "direction"
   end
 
   create_table "skills", force: :cascade do |t|

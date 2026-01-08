@@ -18,6 +18,20 @@ Rails.application.routes.draw do
 
   Rails.application.routes.draw do 
     resources :personal_infos
-  end
+    resources :robots do
+        collection do 
+          post :place
+        end
+
+        member do 
+          post :move
+          post :rotate
+          
+        end
+
+      end
+    end  
+
+
 
 end
