@@ -26,7 +26,7 @@ Rails.application.routes.draw do
         member do 
           post :move
           post :rotate
-          
+          get  :report
         end
 
       end

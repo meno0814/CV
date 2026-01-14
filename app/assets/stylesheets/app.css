@@ -72,9 +72,10 @@ li {
 
 select {
   margin-bottom: 20px;
-  padding: 6px 10px;
-  font-size: 14px;
-  border-radius: 4px;
+  margin-right: auto;
+  float: right;
+  width: 188px;
+  text-align: center;
 }
 
 
@@ -86,9 +87,17 @@ select {
 .personal-info input {
   float: right;
   margin-left: 10px;
-  
-}
+  width: 180px; 
+} 
 
 input[type="submit"] {
   float: left;
+  margin-left: 100px;
+  width: 180px;
+}
+
+button{
+  float: left;
+  width: 180px;
+  margin-bottom: 10px;
 }

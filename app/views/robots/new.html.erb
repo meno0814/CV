@@ -1,9 +1,9 @@
 <%= form_with model: @robot, url: place_robots_path, method: :post do |f| %>
-  <div>
+  <div class="personal-info"
     <p>Robot Name: <%= f.text_field :robot_name, placeholder:"" %></p>
-    <p>X: <%= f.text_field :x_coordinate, placeholder:"" %></p>
-    <p>Y: <%= f.text_field :y_coordinate, placeholder:"" %></p>
-    <p>Diection: <%= f.text_field :direction, placeholder:"" %></p>
+    <p>X: <%= f.number_field :x_coordinate, min: 0, max: 2, step: 1, required: true, placeholder:"" %></p>
+    <p>Y: <%= f.number_field :y_coordinate, min: 0, max: 2, step: 1, required: true, placeholder:"" %></p>
+    <p>Diection: <%= f.select :direction, options_for_select(%w[North East West South]) %></p>
 
   <%= f.submit %>
   </div>

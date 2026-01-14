@@ -32,7 +32,7 @@ class RobotsController < ApplicationController
   end
   
   def report
-    
+    @robot = Robot.find(params[:id])
   end
 
   private 
